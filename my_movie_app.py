@@ -17,7 +17,7 @@ from sklearn.neighbors import NearestNeighbors
 
 # Configuration de la page et caches
 st.set_page_config(
-    page_title = "Imbd",
+    page_title = "Imdb",
     page_icon = "🎥",
     layout="wide",
 )
@@ -320,7 +320,7 @@ elif selected == 'Fiche':
                     if pays:
                         st.write("Pays d'origine:", pays[0])
                     st.write("Durée:", str(first_result['runtime']), 'minutes')
-                    st.write("Rating IMDb :", first_result['imdbRating'])
+                    st.write("Rating IMDb :", str(first_result['imdbRating']))
                     st.write("Age minimum recommandé:", str(first_result['advisedMinimumAudienceAge']), 'ans')
                     trailer_link = first_result.get('youtubeTrailerVideoLink')
                     if trailer_link:
@@ -336,26 +336,26 @@ elif selected == 'Fiche':
                     for i, cast_member in enumerate(first_result.get('cast', [])):
                         st.write(f"{cast_member}")
                         streaming_info = first_result.get('streamingInfo', {})
-                        if isinstance(streaming_info, dict):
-                            streaming_info_fr = streaming_info.get('fr', {})
-                            if streaming_info_fr:
-                                st.subheader("Streaming :")
-                                for platform, options in streaming_info_fr.items():
-                                    st.subheader(f"{platform}:")
-                                    if isinstance(options, list):
-                                        for i, option in enumerate(options):
-                                            if isinstance(option, dict):
-                                                st.write("Link:", option.get('link'))
-                                            else:
-                                                st.write("Streaming n'est pas disponible.")
-                                            st.write()  
-                                    else:
-                                        st.write("Streaming info is not available.")
-                                    st.write() 
-                            else:
-                                st.write("No streaming information available.")
+                    if isinstance(streaming_info, dict):
+                        streaming_info_fr = streaming_info.get('fr', {})
+                        if streaming_info_fr:
+                            st.subheader("Streaming :")
+                            for platform, options in streaming_info_fr.items():
+                                st.subheader(f"{platform}:")
+                                if isinstance(options, list):
+                                    for i, option in enumerate(options):
+                                        if isinstance(option, dict):
+                                            st.write("Link:", option.get('link'))
+                                        else:
+                                            st.write("Streaming n'est pas disponible.")
+                                        st.write()  
+                                else:
+                                    st.write("Streaming info is not available.")
+                                st.write() 
                         else:
                             st.write("No streaming information available.")
+                    else:
+                        st.write("No streaming information available.")
                     st.write()
         else:
             st.write("No movie items found in the response data.")
