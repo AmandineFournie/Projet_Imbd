@@ -297,7 +297,7 @@ elif selected == 'Fiche':
         querystring = {"title":movie_name,"country":"fr","show_type":"movie","services":"netflix,prime.buy,hulu.addon.hbo,disney","output_language":"fr"}
 
         headers = {
-            "X-RapidAPI-Key": "st.secrets[Key]"
+            "X-RapidAPI-Key": st.secrets["Key"]
             "x-RapidAPI-Host": "streaming-availability.p.rapidapi.com"
         }
 
