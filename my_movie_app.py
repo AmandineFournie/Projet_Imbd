@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from dash import html
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_elements import elements, mui, html, sync
