@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-import dash_bootstrap_components as dbc
 from dash import html
-import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_elements import elements, mui, html, sync
