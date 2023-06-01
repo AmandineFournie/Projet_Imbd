@@ -5,12 +5,11 @@ import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_elements import elements, mui, html, sync
-import logging
+import streamlit.components.v1
 from typing import List
 import requests
 from streamlit_searchbox import st_searchbox
 from streamlit_modal import Modal
-import requests
 from sklearn.neighbors import NearestNeighbors
 
 # Configuration de la page et caches
