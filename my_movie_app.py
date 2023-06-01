@@ -298,7 +298,7 @@ elif selected == 'Fiche':
 
         headers = {
             "X-RapidAPI-Key": "st.secrets[Key]"
-            "X-RapidAPI-Host": "st.secrets[Host]"
+            "x-RapidAPI-Host": "streaming-availability.p.rapidapi.com"
         }
 
 
