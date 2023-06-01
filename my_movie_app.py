@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import dash
 import dash_bootstrap_components as dbc
 from dash import html
 import streamlit.components.v1 as components
