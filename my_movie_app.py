@@ -152,9 +152,9 @@ elif selected == '✨ Présentation ✨':
 # KPI via PowerBi
 elif selected == '📈 PowerBI 📈':
     IMAGES = [
-        "https://www.obs-ed.fr/wp-content/uploads/2023/06/Movies1.png",
+        "https://www.obs-ed.fr/wp-content/uploads/2023/06/Movies1-1.png",
         "https://www.obs-ed.fr/wp-content/uploads/2023/06/Movies2.png",
-        "https://www.obs-ed.fr/wp-content/uploads/2023/06/Movies3.png",
+        "https://www.obs-ed.fr/wp-content/uploads/2023/06/Movies3-1.png",
     ]
 
     def slideshow_swipeable(images):
